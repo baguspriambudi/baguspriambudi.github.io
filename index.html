@@ -14,7 +14,13 @@
     <meta property="og:image:height" content="1024" />
     <meta property="og:image:alt" content="Wedding Of, Syahid-Dwi" />
     <meta property="og:image:type" content="image/jpeg" />
+
     <style>
+      @font-face {
+          font-family: 'Monotype Corsiva'; /* Nama font yang akan digunakan */
+          src: url('./monotype_corsiva/monotype-corsiva.ttf') format('truetype'); /* Path ke file .ttf */
+      }
+
       @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
       @import url("https://db.onlinewebfonts.com/c/84ae358e627d67d90bd613fcedc20c10?family=Edwardian+Script+ITC");
 
@@ -91,7 +97,7 @@
 
       <p style="text-align: justify;">
         Dearest Readers, <br>
-        In the name of Allah, the Most Benevolent, the Most Merciful
+        In the name of Allah, the Most Benevolent, the Most Merciful.
         Together with our families, we request of your presence at our wedding.
       </p>
 
@@ -122,11 +128,13 @@
   </body>
 
   <script>
-     document.addEventListener('DOMContentLoaded', () => {
+     window.onload = () => {
             const audio = document.getElementById('myAudio');
-            audio.play().catch(error => {
-                console.log('Autoplay dicegah:', error);
+            audio.play().then(() => {
+                console.log('Audio diputar secara otomatis.');
+            }).catch(error => {
+                console.log('Autoplay dicegah oleh browser:', error);
             });
-        });
+        };
   </script>
 </html>
