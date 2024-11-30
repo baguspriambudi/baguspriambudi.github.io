@@ -16,20 +16,8 @@
     <meta property="og:image:type" content="image/jpeg" />
 
     <style>
-      /* @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
-      @import url("https://db.onlinewebfonts.com/c/84ae358e627d67d90bd613fcedc20c10?family=Edwardian+Script+ITC"); */
-      @font-face {
-          font-family: 'Monotype Corsiva'; /* Nama font yang akan digunakan */
-          src: url('./font/monotype-corsiva.ttf') format('truetype'); /* Path ke file .ttf */
-      }
-      @font-face {
-          font-family: 'Edwardian Script ITC'; /* Nama font yang akan digunakan */
-          src: url('./font/edwardianscriptitc.ttf') format('truetype'); /* Path ke file .ttf */
-      }
-      @font-face {
-          font-family: 'EB Garamond'; /* Nama font yang akan digunakan */
-          src: url('./font/EBGaramond-Regular.ttf') format('truetype'); /* Path ke file .ttf */
-      }
+
+      @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
       body {
         background-color: #ffffff;
@@ -38,8 +26,11 @@
         font-size: 18px;
       }
 
-      .header {
-        font-family: "Edwardian Script ITC";
+      @media (max-width: 768px) {
+        .header {
+          font-family: "Edwardian Script ITC";
+          font-size: 12px;
+        }
       }
 
       .container {
@@ -47,21 +38,30 @@
         margin: 0 auto;
         padding: 20px;
         text-align: center;
-        font-family: "EB Garamond", serif;
-        background-image: url("https://s3.ap-southeast-1.amazonaws.com/inviten.id/bgs_sanss/background.jpg");
+        font-family: "Alegreya", serif;
+      }
+
+      .kolom {
+        display: flex;
+      }
+
+      .box {
+        flex: auto;
+        text-align: center;
       }
 
       .title {
-        font-size: 50px;
-        font-weight: bold;
+        font-size: 16px;
         margin-bottom: 5px;
       }
 
-      .tagline {
-        margin-top: 0;
-        font-family: "Monotype Corsiva", serif;
-        font-size: 30px;
-        margin-bottom: 10px;
+      .calon {
+        font-size: 25px;
+      }
+
+      .alamat {
+        margin-top: 10px;
+        font-size: 20px;
       }
 
       .button {
@@ -78,70 +78,73 @@
       }
 
       .footer {
-        margin-top: 70px;
+        margin-top: 55px;
         font-size: 15px;
         color: #888888;
       }
+
+      .date {
+        font-size: 4rem;
+        font-weight: 5px;
+      }
+
     </style>
     <title>Wedding Invitation Bagus - Santi</title>
   </head>
   <body>
     <div class="container">
-      <div class="img" style="margin-top: -20px; margin-bottom: -35px">
-      <!-- <div class="img" style="margin-top: 40px; margin-bottom: 40px"> -->
-        <img src="https://s3.ap-southeast-1.amazonaws.com/inviten.id/bgs_sanss/foto.png" width="250" alt="Wedding Image" />
+      <div class="img" style="margin-top: -40px; margin-bottom: -5px">
+        <img src="./1.png" width="250" alt="Wedding Image" />
       </div>
 
-      <audio id="myAudio">
-        <source src="https://s3.ap-southeast-1.amazonaws.com/inviten.id/music/y2mate.com+-+Banda+Neira++Hujan+di+Mimpi+lyrics+video.mp3" type="audio/mpeg">
-      </audio>
+      <div class="title">Together with their families</div>
+      <div class="calon">BAGUS PRIAMBUDI NUGROHO</div>
 
-      <div class="header">
-        <div class="title">Wedding Invitation</div>
-        <hr style="height: 2px; background-color: #000000; border: none;">
-        <p class="tagline">Bagus & Santi</p>
+      <div class="kolom">
+        <div class="box" style="width: 150px;"><hr style="height: 2px; background-color: #000000;"></div>
+        <div class="box">and</div>
+        <div class="box" style="width: 150px;"><hr style="height: 2px; background-color: #000000;"></div>
       </div>
 
-      <p style="text-align: justify;">
-        Dearest Readers, <br>
-        In the name of Allah, the Most Benevolent, the Most Merciful.
-        Together with our families, we request of your presence at our wedding.
-      </p>
+      <div class="calon" style="margin-bottom: 10px;">NURSANTI SETYO UTAMI</div>
+      
+      <div class="title" style="margin-bottom: 25px;">Joyfully invite you to celebrate their wedding</div>
+      
+      <div class="kolom">
+        <div class="box">
+          <div style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <p style="margin: 0px; text-align: right;">SUNDAY <br> DECEMBER</p>
+          </div>
+        </div>
+        <div class="box" style="border-right: 3px solid black; border-left: 3px solid black; position: relative; width: 60px; height: 70px; padding-bottom: 4px;">
+          <div style="width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; position: absolute; margin-top: -7px;">
+            <p class="date" style="margin: 0px;">29</p>
+          </div>
+        </div>
+        <div class="box">
+          <div style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <p style="margin: 0px; text-align: left;">9.00 AM <br> 2024</p>
+          </div>
+        </div>
+      </div>
 
-      <p>
-        Sunday, 29 Dec 2024 | 09.00 AM - end <br>
-        At Karanganyar, Central Java
-      </p>
-
+      <div class="alamat" style="margin-top: 50px;">MABES CONVENTION CENTER (MCC) <br> JL. KAPTEN MULYADI NO. 17 <br> KARANGANYAR, CENTRAL JAVA</div>
+      <br>
       <a
         href="https://maps.app.goo.gl/oyJK9YEJL4jXUfUw7"
         class="button"
         target="_blank"
-        >View on Map</a
-      >
-
-      <p style="text-align: left; margin-top: 20px;">
-        Yours Truely, <br>
-        Bagus & Santi
-      </p>
+        >View on Map
+      </a>
 
       <div class="footer">
         <p>
           &copy; 2024 All rights reserved. <br />
-          Bagus P
         </p>
       </div>
     </div>
   </body>
 
-  <script>
-     window.onload = () => {
-            const audio = document.getElementById('myAudio');
-            audio.play().then(() => {
-                console.log('Audio diputar secara otomatis.');
-            }).catch(error => {
-                console.log('Autoplay dicegah oleh browser:', error);
-            });
-        };
+  <script>       
   </script>
 </html>
